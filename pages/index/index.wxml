@@ -1,0 +1,36 @@
+<!--pages/index/index.wxml-->
+<view class="header">
+  <view class="iconfont icon-caidan" bindtap="handleOpenMenu"></view>
+  <view class="iconfont icon-sousuo"></view>
+</view>
+<scroll-view
+  style="height: calc(100vh - 80rpx);"
+  scroll-y
+  refresher-enabled
+  refresher-triggered="{{refreshed}}"
+  refresher-default-style="none"
+  bindrefresherpulling="onPulling"
+  bindrefresherrefresh="onRefresh"
+  bindscrolltolower="onScrolltolower"
+>
+  <view
+    slot="refresher" 
+    class="refresh-container"
+  >
+    <view style="width: 100vw; text-align: center; font-size: 24rpx;">{{refreshText}}</view>
+  </view>
+  <view class="book-list">
+    <view class="book-item" wx:for="{{bookList}}" wx:key="id">
+      <image class="img" src="{{item.image}}"></image>
+      <view class="info">
+        <text class="title">{{item.name}}</text>
+        <text class="newest">最新：{{item.newestSection}}</text>
+        <text class="update-time">{{item.updateTime}}</text>
+      </view>
+      <view class="iconfont icon-caidan1" data-book="{{item}}" bindtap="handleOpenTool"></view>
+    </view>
+  </view>
+  <view class="finish-text">{{finished ? '没了没了，一本都没有了~' : ''}}</view>
+</scroll-view>
+<menu show="{{showMenu}}" bind:close-menu="handleCloseMenu"></menu>
+<bottom-tool show="{{showTool}}" book="{{book}}" bind:close-tool="handleCloseTool"></bottom-tool>

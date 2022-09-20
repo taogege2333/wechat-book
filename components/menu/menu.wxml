@@ -1,0 +1,16 @@
+<!--components/menu.wxml-->
+<root-portal wx:if="{{show}}">
+  <view class="menu">
+    <view class="menu-content">
+      <view class="menu-item">整理菜单</view>
+      <view class="menu-item">切换模式</view>
+      <view class="menu-item">选择排序</view>
+      <view class="menu-item">上传进度</view>
+      <view class="menu-item">下载进度</view>
+      <view class="menu-item">WiFi传书</view>
+      <view class="menu-item">本地导入</view>
+      <view class="menu-item">TXT下载</view>
+    </view>
+    <view class="menu-mask" bindtap="handleCloseMenu"></view>
+  </view>
+</root-portal>

@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/book-city/book-city",
+    "pages/classify/classify",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#409eff",
+    "navigationBarTitleText": "小说",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#409eff",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "书架",
+        "iconPath": "/assets/image/shujia.png",
+        "selectedIconPath": "/assets/image/s-shujia.png"
+      },
+      {
+        "pagePath": "pages/book-city/book-city",
+        "text": "书城",
+        "iconPath": "/assets/image/fangzi.png",
+        "selectedIconPath": "/assets/image/s-fangzi.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "/assets/image/yingyong.png",
+        "selectedIconPath": "/assets/image/s-yingyong.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/assets/image/wodedamaijihuo.png",
+        "selectedIconPath": "/assets/image/s-wodedamaijihuo.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

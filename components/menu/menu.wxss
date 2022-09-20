@@ -1,0 +1,39 @@
+/* components/menu.wxss */
+.menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.menu-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+}
+
+.menu-content {
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  margin-top: 84rpx;
+  border-radius: 8rpx;
+  background: #fff;
+  opacity: 0;
+}
+
+.menu-item {
+  font-size: 28rpx;
+  padding: 20rpx 60rpx;
+}
+
+.menu-item + .menu-item {
+  border-top: 1rpx solid #efefef;
+}
+

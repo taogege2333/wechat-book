@@ -1,0 +1,57 @@
+<!--components/bottom-tool/bottom-tool.wxml-->
+<root-portal wx:if="{{show}}">
+  <view class="bottom-tool">
+    <view class="mask" bindtap="handleCloseTool"></view>
+    <view class="content">
+      <view class="book">
+        <image class="left" src="{{book.image}}"></image>
+        <view class="center">
+          <view class="name">{{book.name}}</view>
+          <view class="author">{{book.author}}</view>
+          <view class="newest-section">{{book.newestSection}}</view>
+        </view>
+        <button class="right">详情</button>
+      </view>
+      <view class="tools">
+        <view class="tools-item">
+          <!-- <view class="iconfont icon-caidan"></view> -->
+          <view class="switch {{isTop ? 'checked' : ''}}" bindtap="handleSwitchChange">
+            <view class="switch-wrapper">
+              <view class="switch-dot"></view>
+            </view>
+          </view>
+          置顶本书
+        </view>
+        <view class="tools-item">
+          <view class="iconfont icon-caidan"></view>
+          目录书摘
+        </view>
+        <view class="tools-item">
+          <view class="iconfont icon-pinglun"></view>
+          查看书评
+        </view>
+        <view class="tools-item">
+          <view class="iconfont icon-xiazai-wenjianxiazai-05"></view>
+          下载本书
+        </view>
+        <view class="tools-item">
+          <view class="iconfont icon-fenxiang"></view>
+          分享本书
+        </view>
+        <view class="tools-item">
+          <view class="iconfont icon-qingchuhuancun"></view>
+          清除缓存
+        </view>
+        <view class="tools-item">
+          <view class="iconfont icon-shanchu"></view>
+          删除本书
+        </view>
+        <view class="tools-item">
+          <view class="iconfont icon-shitifenzu"></view>
+          移至分组
+        </view>
+      </view>
+      <button class="cancel" bindtap="handleCloseTool">取消</button>
+    </view>
+  </view>
+</root-portal>

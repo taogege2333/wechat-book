@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "menu": "/components/menu/menu",
+    "bottom-tool": "/components/bottom-tool/bottom-tool"
+  }
+}
