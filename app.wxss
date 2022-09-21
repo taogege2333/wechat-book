@@ -1,6 +1,10 @@
 /**app.wxss**/
 @import "./assets/wxss/iconfont.wxss";
 
+page {
+  --main-color: #409eff;
+}
+
 .container {
   height: 100%;
   display: flex;

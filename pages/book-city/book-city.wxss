@@ -1,1 +1,35 @@
 /* pages/book-city/book-city.wxss */
+.tabs {
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: var(--main-color);
+  color: #fff;
+  position: relative;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  transition: all 200ms linear;
+}
+
+.tab.current {
+  transform: scale(1.2);
+}
+
+.slide-bar {
+  position: absolute;
+  bottom: -2rpx;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 16rpx solid #fff;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.swiper {
+  height: calc(100vh - 80rpx);
+}

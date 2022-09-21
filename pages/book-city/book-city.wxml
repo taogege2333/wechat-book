@@ -1,2 +1,18 @@
 <!--pages/book-city/book-city.wxml-->
-<text>pages/book-city/book-city.wxml</text>
+<view class="tabs">
+  <view
+    class="tab {{currentIndex === index ? 'current' : ''}}"
+    wx:for="{{tabs}}"
+    wx:key="name"
+    bindtap="handleTabClick"
+    data-index="{{index}}"
+  >
+    {{item.name}}
+  </view>
+  <view class="slide-bar" style="transform: translateX({{slideTranslate}}px);"></view>
+</view>
+<swiper class="swiper" current="{{currentIndex}}" circular="{{false}}" bindchange="onSwiperChange" bindtransition="onTransition" bindanimationfinish="onAnimationfinish">
+  <swiper-item wx:for="{{tabs}}" wx:key="name">
+    <view>{{item.component}}</view>
+  </swiper-item>
+</swiper>
